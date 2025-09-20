@@ -1,1 +1,74 @@
-2025-09-20: First log entry – research papers collected.
+Chapter 1: Introduction (18/08/2025 – 30/08/2025)
+
+Problem Statement:
+Many deaf and hard-of-hearing people face difficulties in daily communication, especially in schools, offices, hospitals, and public places. Most tools only convert speech into text, but not into sign language format. There is still no proper system that can quickly convert speech into sign-compatible text in real time.
+
+Objectives:
+
+To create a real-time system that converts speech into sign-friendly text.
+
+To connect speech recognition (ASR) with a text-to-sign converter in one pipeline.
+
+To mainly focus on Indian Sign Language (ISL), but also keep it flexible for other languages.
+
+To make the system fast and accurate (with less than 2–3 seconds delay).
+
+To build a base that can later be extended into animated sign language systems.
+
+Applications of Project:
+This system can be used in classrooms (for lectures), workplaces (for meetings), government offices, hospitals, and public services—anywhere real-time communication is needed between hearing people and the deaf community.
+
+Chapter 2: Literature Survey (01/09/2025 – 13/09/2025)
+
+Background:
+Speech-to-text systems like Mozilla Common Voice and LibriSpeech are already very advanced. For text-to-sign translation, there are datasets and models like iSign and ISLTranslate, but they mostly start from text, not live speech. Some old projects tried direct speech-to-sign, but they were limited to very small vocabularies and worked slowly.
+
+Existing Systems:
+
+SHuBERT (2024) – Learns sign language features from videos.
+
+iSign (2024) – Provides a big dataset for Indian Sign Language.
+
+ISLTranslate (2023) – Has around 31,000 English–ISL sentence pairs.
+
+Linguistically Informed Transformers (2024) – Converts English text to American Sign Language (ASL) gloss.
+
+DeepASL (2018) – Sentence-level ASL translation using deep learning.
+
+Limitations in Existing Work:
+
+No end-to-end real-time system (speech → sign text).
+
+Very few datasets available for Indian Sign Language.
+
+Grammar rules of sign language are not handled properly in most models.
+
+Slow performance, not suitable for live conversations.
+
+Chapter 3: Methodology (15/09/2025 – 27/09/2025)
+
+Hardware and Software:
+
+Hardware: Laptop/PC with good processor, GPU if possible, and a microphone.
+
+Software: Python, PyTorch/TensorFlow, HuggingFace library, Tableau/Power BI for data analysis and visualization.
+
+System Design:
+
+Block Diagram:
+Speech → ASR Module → Text → NLP Translation Module → Sign Gloss Text Output.
+
+Data Flow Diagram (DFD):
+Speech is taken → processed → converted into text → grammar changed into sign-friendly format → shown as output.
+
+Datasets Used:
+
+Speech: Mozilla Common Voice, LibriSpeech.
+
+Sign/Gloss: ASLG-PC12, ISLTranslate, iSign dataset.
+
+Exploratory Data Analysis (EDA):
+
+For speech: checked sentence length, most frequent words, clip duration.
+
+For gloss: checked average gloss length, most common gloss tokens, English vs gloss sentence comparison.
